@@ -22,7 +22,7 @@ build: $(templates)
 # the local dir will be mounted under /src read-only
 run:
 	docker run --privileged --rm \
-		-p 6080:80 -p 6081:443 \
+		-p 6080:3000 -p 6081:443 \
 		-v ${PWD}:/src:ro \
 		-e USER=doro -e PASSWORD=mypassword \
 		-e ALSADEV=hw:2,0 \
